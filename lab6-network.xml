@@ -1,0 +1,21 @@
+<network>
+  <name>lab6-network</name>
+  <forward mode='nat'>
+    <nat>
+      <port start='1024' end='65535'/>
+    </nat>
+  </forward>
+  <mac address='52:54:00:8e:3b:51'/>
+  <domain name='lab6.example.com'/>
+  <ip address='10.9.0.41' netmask='255.255.255.248'>
+    <dhcp>
+      <range start='10.9.0.42' end='10.9.0.46'/>
+			<host mac='52:54:00:5d:e1:42' name='control' ip='10.9.0.42'/>
+			<host mac='52:54:00:5d:e1:43' name='ansible1' ip='10.9.0.43'/>
+			<host mac='52:54:00:5d:e1:44' name='ansible2' ip='10.9.0.44'/>
+			<host mac='52:54:00:5d:e1:45' name='ansible3' ip='10.9.0.45'/>
+			<host mac='52:54:00:5d:e1:46' name='ansible4' ip='10.9.0.46'/>
+    </dhcp>
+  </ip>
+</network>
+
